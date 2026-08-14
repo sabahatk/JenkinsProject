@@ -1,1 +1,1 @@
-print("Hello from Sabahat's Jenkins -> Docker -> DockerHub pipeline! v1")
+print("Sabahat's Jenkins -> DockerHub pipeline v2")
