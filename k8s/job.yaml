@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: sabahat-python-app
+spec:
+  backoffLimit: 2
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: sabahat-python-app
+        image: sabahatkhan/sabahat-python-app:latest
+        imagePullPolicy: Always
