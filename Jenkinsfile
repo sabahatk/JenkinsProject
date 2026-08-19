@@ -22,6 +22,12 @@ pipeline {
                 sh 'docker push $IMAGE_NAME:latest'
             }
         }
+        stage('Sabahat - Deploy to Kubernetes') {
+            steps {
+                sh 'kubectl delete job sabahat-python-app --ignore-not-found=true'
+                sh 'kubectl apply -f k8s/job.yaml'
+            }
+}
     }
  
     post {
